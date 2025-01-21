@@ -14,7 +14,7 @@ def save_image(filename, buf):
     except OSError as e:
         print(f"Failed to save image: {e}")
         
-from test import AI_cam
+from CPCV import AI_cam
 from ov7670 import camera
 
 cam=AI_cam(camera)
