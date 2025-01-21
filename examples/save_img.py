@@ -1,9 +1,6 @@
 import storage
 import os
 
-# Example data to save
-data = "Hello, CircuitPython! This is a test file."
-
 # Ensure the storage is writable
 storage.remount("/", readonly=False)
 
