@@ -1,4 +1,3 @@
-from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,9 +22,10 @@ def raw_to_image(raw_file, output_image, width, height, endian="little"):
         # Append the RGB tuple to the list
         rgb_values.append((r, g, b))
     rgb_values=np.array(rgb_values).reshape((height,width,3))
-    # Create and save the image
-    image = Image.fromarray(rgb_values, mode="RGB")
-    image.save(output_image)
+    plt.imshow(rgb_values)
+    plt.axis("off")
+    plt.savefig(output_image)
+    plt.show()
     print(f"Image saved as '{output_image}'.")
 
 
